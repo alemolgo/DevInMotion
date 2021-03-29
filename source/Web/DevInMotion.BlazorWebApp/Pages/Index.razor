@@ -1,0 +1,68 @@
+﻿@page "/"
+@inject HttpClient client;
+
+
+<button class="btn btn-success" @onclick="@GetAgreeements"> Get Agreement List </button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>CreationDate</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var agreement in agreementList)
+        {
+            <tr>
+                <td>
+                    @agreement.Id
+                </td>
+                <td>
+                    @agreement.Name
+                </td>
+                <td>
+                    @agreement.Description
+                </td>
+                <td>
+                    @agreement.Amount
+                </td>
+                <td>
+                    @agreement.CreationDate
+                </td>
+                <td>
+                    @agreement.Active
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+@code
+{
+
+    private const string uri = "https://localhost:44392/api/Agreement";
+    public List<Agreement> agreementList = new List<Agreement>();
+
+
+    public async Task GetAgreeements()
+    {
+        agreementList = await client.GetJsonAsync<List<Agreement>>(uri);
+    }
+
+
+    public class Agreement
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Amount { get; set; }
+        public bool Active { get; set; }
+        public DateTime CreationDate { get; set; }
+    }
+}

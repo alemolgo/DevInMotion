@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+
+
+@{
+    ViewData["Title"] = "DevInMotion Index";
+}
+
+<div class="text-center">
+   @* <h1 class="display-4">Welcome</h1>*@
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+
+</div>
+
+<h2>
+    DevInMotion Agreements
+</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.agreementList[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agreementList[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agreementList[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agreementList[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agreementList[0].CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agreementList[0].Active)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var agreement in Model.agreementList)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => agreement.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => agreement.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => agreement.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => agreement.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => agreement.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => agreement.Active)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

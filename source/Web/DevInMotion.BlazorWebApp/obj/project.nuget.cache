@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zg4Cna04eZQ0zcgaiYyy533RvHw3ltjtss3NibzgcyjREPMvxKfczMrtLj1uwMP3qvjfKb1zIswT1n3qFOxdUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\almg1791\\Desktop\\DevInMotion\\source\\Web\\DevInMotion.BlazorWebApp\\DevInMotion.BlazorWebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\almg1791\\.nuget\\packages\\microsoft.aspnetcore.blazor.httpclient\\3.2.0-preview3.20168.3\\microsoft.aspnetcore.blazor.httpclient.3.2.0-preview3.20168.3.nupkg.sha512",
+    "C:\\Users\\almg1791\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\almg1791\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
